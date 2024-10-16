@@ -1,0 +1,237 @@
+:root {
+    --primary-color: #6200ea;
+    --secondary-color: #00bcd4;
+    --accent-color: #ff4081;
+    --text-color: #333333;
+    --bg-color: #e0f7fa;
+    --card-bg: #ffffff;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
+        .logo {
+            width: 150px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+        }
+        .notification-chamber {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border-radius: 10px;
+            display: none;
+            z-index: 100;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        button, select, input {
+            font-family: 'Poppins', sans-serif;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 20px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        input, select {
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .image-container {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+        .image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        .image-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .image-info {
+            padding: 20px;
+        }
+        .image-info h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+        }
+        .image-info p {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 0.9em;
+        }
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+        .tag {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            max-height: 80%;
+            object-fit: contain;
+        }
+        .lightbox-caption {
+            margin: auto;
+            width: 80%;
+            max-width: 900px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .lightbox-nav button {
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .lightbox-nav button:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+            input, select {
+                width: 100%;
+            }
+        }
